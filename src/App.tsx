@@ -4,6 +4,7 @@ import './App.css'
 import Feed from './components/feed/Feed'
 // import MyTabs from './components/BottomNav';
 import Settings from './components/settings/Settings';
+import NavBar from './components/navbar/NavBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,7 +14,7 @@ function App() {
     <>
       <Player />
       <Feed />
-      <Settings />
+      <NavBar />
     </>
   )
 }
