@@ -4,7 +4,7 @@ interface CommentBoxProps {
     text: string
 }
 
-const CommentBar: React.FC<CommentBoxProps> = ({ text }) => {
+const CommentBar: React.FC<CommentBoxProps> = ({ }) => {
     const [newComment, setNewComment] = useState('');
 
     const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
