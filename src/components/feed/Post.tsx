@@ -58,7 +58,7 @@ const Post: React.FC<PostItemProps> = ({ name, image, time, description, comment
                 </button>
             </div>
             <p className="post-item-desc">{description}</p>
-            <CommentFeed comments={comment}></CommentFeed>
+            <CommentFeed initialComments={comment}></CommentFeed>
         </div>
 
 
