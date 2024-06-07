@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
-    "lint": "eslint",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -30,5 +30,5 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4"
   },
-  "homepage": "."
+  "homepage": "https://elysoneva.github.io/music-sharing-client/"
 }
