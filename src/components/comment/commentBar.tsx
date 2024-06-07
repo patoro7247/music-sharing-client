@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 interface CommentBoxProps {
-    text: string
+    onAddComment: (comment: { name: string; time: string; description: string }) => void;
 }
 
-const CommentBar: React.FC<CommentBoxProps> = ({ }) => {
+
+const CommentBar: React.FC<CommentBoxProps> = ({ onAddComment }) => {
+
     const [newComment, setNewComment] = useState('');
 
     const handleCommentChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,6 +16,14 @@ const CommentBar: React.FC<CommentBoxProps> = ({ }) => {
         // Here you can handle adding the comment, e.g., send to backend or update state
         console.log('Adding comment:', newComment);
         // Clear the comment input
+
+        const comment = {
+            name: 'Anon',
+            time: new Date().toLocaleString(),
+            description: newComment
+        }
+
+        onAddComment(comment);
         setNewComment('');
     };
 

@@ -148,6 +148,13 @@ button:focus-visible {
   background-color: #0056b3;
 }
 
+.like-button {
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  color: #ff0000
+}
+
 .comment-input {
   flex: 1;
   padding: 6px;
