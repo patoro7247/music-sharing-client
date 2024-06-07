@@ -15,6 +15,7 @@ interface PostItemProps {
 const Post: React.FC<PostItemProps> = ({ name, image, time, description, comment, audioUrl }) => {
     const [followed, setFollowed] = useState(false);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [isLiked, setIsLiked] = useState(false);
     const audioRef = useRef(new Audio(audioUrl));
 
     const togglePlayPause = () => {
@@ -24,6 +25,10 @@ const Post: React.FC<PostItemProps> = ({ name, image, time, description, comment
             audioRef.current.play();
         }
         setIsPlaying(!isPlaying);
+    };
+
+    const toggleLike = () => {
+        setIsLiked(!isLiked);
     };
 
     const handleFollowToggle = () => {
@@ -47,9 +52,13 @@ const Post: React.FC<PostItemProps> = ({ name, image, time, description, comment
                 <button className="play-pause-button" onClick={togglePlayPause}>
                     {isPlaying ? '⏸️' : '▶️'}
                 </button>
+
+                <button className="like-button" onClick={toggleLike}>
+                    {isLiked ? '❤' : '🤍'}
+                </button>
             </div>
             <p className="post-item-desc">{description}</p>
-            <CommentFeed comments={comment}></CommentFeed>
+            <CommentFeed initialComments={comment}></CommentFeed>
         </div>
 
 
