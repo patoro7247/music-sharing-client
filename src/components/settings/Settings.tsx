@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import UserProfile from './UserProfile';
 import SecuritySettings from './SecuritySettings';
 import OtherSettings from './Others';
+import { useState } from 'react';
 
 const Settings = () => {
   const [selectedCategory, setSelectedCategory] = useState('profile');
