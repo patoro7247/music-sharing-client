@@ -23,7 +23,6 @@ const NavBar = () => {
       <div className="navbar-sidebar">
         <button onClick={() => setSelectedCategory('home')}>Home</button>
         <button onClick={() => setSelectedCategory('settings')}>Settings</button>
-        {/* <button onClick={() => setSelectedCategory('other')}>Other Settings</button> */}
       </div>
       <div className="navbar-content">
         {renderContent()}
