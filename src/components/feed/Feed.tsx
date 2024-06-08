@@ -1,6 +1,13 @@
 import Post from "./Post"; // Adjust the path as per your project structure
+import React, {useState} from 'react';
 
-function Feed() {
+interface FeedProps {
+    posts: Post[];
+  }
+
+const Feed: React.FC<FeedProps> = ({ posts }) => {
+
+    console.log(posts)
     return (
         <div className="feed">
             <Post
@@ -30,6 +37,18 @@ function Feed() {
                     Display post
                      */}
             {/* Else   <label className="feed">There is nothing here!!!</label>*/}
+            {posts.map((post, index) => (
+                <Post
+                key={index+4}
+                name={post.name}
+                image={post.image}
+                description={post.newPostText}
+                comment={{}}
+                time={post.time}
+                audioUrl={post.newSongTitle}
+                />
+                
+            ))}
         </div>
     );
 }
