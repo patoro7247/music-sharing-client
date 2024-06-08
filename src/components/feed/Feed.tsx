@@ -1,3 +1,4 @@
+import React from "react";
 import Post from "./Post"; // Adjust the path as per your project structure
 
 function Feed() {
