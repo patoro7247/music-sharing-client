@@ -1,0 +1,46 @@
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .navbar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 60px; /* Adjust this value based on the footer height */
+  }
+  
+  .navbar-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0; /* Remove padding to allow buttons to fill the space */
+    background-color: #f1f1f1;
+    border-top: 1px solid #ccc;
+  }
+  
+  .navbar-footer button {
+    background-color: white;
+    color: black;
+    border: none;
+    flex: 1; /* Allow buttons to grow and fill the available space */
+    padding: 20px 0; /* Ensure buttons are square */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure buttons take the full height of the footer */
+  }
+  
+  .navbar-footer button.active {
+    background-color: blue;
+    color: white;
+  }
+  
+  .navbar-footer button:hover {
+    background-color: lightgray;
+  }
+  
